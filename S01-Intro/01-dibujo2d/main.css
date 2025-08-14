@@ -1,0 +1,26 @@
+body{
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: white;
+}
+
+canvas{
+    background-color: black;
+
+    height: 100%;
+    width: 100%;
+    position: static;
+    top: 0;
+    left: 0;
+}
+
+#boton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: orange;
+    padding: 15px 50px;
+    background-color: black;
+}
