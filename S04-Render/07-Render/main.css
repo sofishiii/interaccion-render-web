@@ -1,0 +1,16 @@
+body{
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: white;
+}
+
+canvas{
+    background-color: rgb(39, 39, 39);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
