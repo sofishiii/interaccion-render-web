@@ -35,7 +35,7 @@ dibujarCirculo(400, 100);
 
 const circulo = {
     colorLinea: "#0000ff", // Changed to blue color
-    grosorLinea: 10,
+    grosorLinea: 1 0,
     radio: 100,
     rotacion: 0,
     anguloInicial: 0,
