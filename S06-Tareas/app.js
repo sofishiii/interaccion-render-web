@@ -1,4 +1,4 @@
-console.log('sesión 05. Geometrías 3D');
+console.log('sesión 05. Tareas - MATCAPS');
 console.log(THREE);
 
 
@@ -18,19 +18,42 @@ const camera = new THREE.PerspectiveCamera(45, canvas.width / canvas.height, 0.1
 
 //2 GEOMETRIAS Y UN MATERIAL
 
-const geometry = new THREE.TorusGeometry();
+const geometry = new THREE.CylinderGeometry();
 
-const material = new THREE.MeshToonMaterial({flatShading:true,
-    specular: "#ffffff",
-    shininess: 10,
-    color: "blue",
+const material = new THREE.MeshNormalMaterial({flatShading:true});
+
+const textureLoader = new THREE.TextureLoader();
+var matcapMaterial;
+var mesh;
+var matcapMap = textureLoader.load(
+  // Textura URL
+  './assets/matcap1.png',
+  // on Load callback
+  function (texture) {
+      matcapMaterial = new THREE.MeshMatcapMaterial( { matcap: texture } );
+      // Mesh.
+      mesh = new THREE.Mesh( geometry, matcapMaterial );
+      // 3. Poner objeto en la escena.
+      scene.add(mesh);
+      mesh.position.z = -8;
+      // 4. Activar animación.
+      animate();
+  },
+  // on Progress (no funciona por ahora)
+  undefined,
+  // on Error callback
+  function (error) { console.error("Algo salio mal con la textura,", error); }
+);
+
+
+
+var matcapMap = textureLoader.load('./assets/matcap1.png', function (texture) {
+    matcapMaterial = new THREE.MeshMatcapMaterial({ matcap: texture });
+    mesh = new THREE.Mesh(geometry, matcapMaterial);
+    scene.add(mesh);
+    mesh.position.z = -5;
+    console.log(texture);
 });
-
-const mesh = new THREE.Mesh(geometry, material);
-
-scene.add(mesh);
-
-mesh.position.z = -5;
 
 //renderer
 const renderer = new THREE.WebGLRenderer({ canvas: canvas});
@@ -50,13 +73,6 @@ function animate() {
     renderer.render(scene, camera);
  }
 
- const topLight = new THREE.PointLight("purple", 100, 100);
-topLight.position.y = 5;
-scene.add(topLight);
 
-const frontLight = new THREE.PointLight("red", 100, 100);
-frontLight.position.set(3,1,3);
-scene.add(frontLight);
-
- animate();
+ //animate();
  
