@@ -58,5 +58,5 @@ const frontLight = new THREE.PointLight("red", 100, 100);
 frontLight.position.set(3,1,3);
 scene.add(frontLight);
 
- animate();
+// animate();
  
