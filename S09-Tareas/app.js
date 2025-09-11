@@ -1,4 +1,4 @@
-console.log("sesión 06. Tareas - MATCAPS en 3D mejorado");
+console.log("sesión 09. Tareas - MATCAPS en 3D mejorado");
 console.log(THREE);
 
 // Configurar canvas y renderer
@@ -8,7 +8,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x000000); // Fondo negro
+scene.background = new THREE.Color(0x000000); 
 
 // Cámara con perspectiva y ligera inclinación
 const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 2000);
@@ -23,7 +23,6 @@ const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
 directionalLight.position.set(1, 1, 1);
 scene.add(directionalLight);
 
-// Paleta de colores
 const palette = [
   "#84D4F2", "#E3F5A1", "#DEC3E6",
   "#BFEAE0", "#DE9BC3", "#F7F7F7"
@@ -41,7 +40,7 @@ const numLines = 100;
 for (let i = 0; i < numLines; i++) {
   const isHorizontal = Math.random() < 0.5;
   const thickness = Math.floor(Math.random() * 4) + 1;
-  const depth = Math.random() * 40 + 10; // Más profundidad que antes
+  const depth = Math.random() * 40 + 10; //profundidad
   const color = palette[Math.floor(Math.random() * palette.length)];
 
   let geometry;

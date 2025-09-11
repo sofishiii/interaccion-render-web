@@ -1,4 +1,4 @@
-console.log('sesión 06. Tareas - MATCAPS');
+console.log('sesión 08. Tarea - MATCAPS 2D');
 console.log(THREE);
 
 const canvas = document.getElementById("canvas");

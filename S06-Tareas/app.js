@@ -1,4 +1,4 @@
-console.log('sesión 06. Tareas - MATCAPS');
+console.log('sesión 06. Tareas - MATCAPS arbol');
 console.log(THREE);
 
 
