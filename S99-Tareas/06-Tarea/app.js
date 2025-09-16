@@ -7,8 +7,8 @@ boomerang.addEventListener("click", () => {
     duration: 3,
     ease: "power1.inOut",
     motionPath: {
-      path: "#curvedPath",
-      align: "#curvedPath",
+      path: "#curvePath",
+      align: "#curvePath",
       autoRotate: true,
       alignOrigin: [0.5, 0.5]
     }
