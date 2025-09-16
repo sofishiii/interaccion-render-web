@@ -17,7 +17,7 @@ circle.addEventListener("click", (e) => {
     const dx = newX - mouseX;
     const dy = newY - mouseY;
     distance = Math.sqrt(dx * dx + dy * dy);
-  } while (distance < 200); lejos del clic
+  } while (distance < 200); //lejos del clic
 
   // hacia la nueva posición
   gsap.to(circle, {
